@@ -14,7 +14,7 @@ Last updated: 2025-10-12
 
 3. Company details
 3.1 Operator: Cotopia (the “Company”).
-3.2 Registered address, tax ID and other corporate identifiers must be added to this document where applicable. Contact: [insert email/contact form URL].
+3.2 Cotopia, Wyoming. Contact: support@cotopia.org.
 
 4. Eligibility
 4.1 You must be at least 18 years old or have reached the age of majority in your jurisdiction to make purchases. If you are under 18, you may only use the Shop with involvement and consent of a parent or legal guardian.
