@@ -203,7 +203,7 @@ Static hosting
   - S3 + CloudFront — upload static files and configure distribution
 
 Server component (optional)
-- If you use webhooks or server-side order verification you will deploy the `server/` component to any Node-capable hosting:
+- If you use webhooks or server-side order verification, you will deploy the `server/` component to any Node-capable hosting:
   - Heroku, Railway, Render, Fly, DigitalOcean App Platform, AWS Elastic Beanstalk
 - Ensure your server has a public HTTPS URL for PayPal webhooks.
 
@@ -291,7 +291,7 @@ Troubleshooting webhooks
 
 License
 -------
-MIT License — see LICENSE file (or add MIT text)  
+GNU v3.0 License — see LICENSE file  
 Attribution: PayPal SDK and Web3/MetaMask are third-party software with their own usage policies.
 
 Acknowledgements
@@ -309,5 +309,6 @@ If you need an enhanced implementation (server order processing, multi-currency,
 - Preferred crypto token / network (ETH mainnet/testnet, USDC, others)
 
 --- 
+
 
 End of README.
