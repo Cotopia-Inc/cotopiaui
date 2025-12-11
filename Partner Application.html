@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner Application</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/0 Application/Logo/Cotopia Logo.png"/>
+     <meta name="description" content="Cotopia — downloadable templates & collections. Secure checkout via PayPal." />
+  <meta property="og:title" content="Cotopia Marketplace" />
+  <meta property="og:description" content="Download professional templates. Secure checkout via PayPal." />
+  <meta property="og:type" content="website" />
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 48px;
+            background: white;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+
+        h1 { font-size: 2em; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
+        h2 { font-size: 1.5em; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
+        h3 { font-size: 1.25em; }
+        h4 { font-size: 1em; }
+        h5 { font-size: 0.875em; }
+        h6 { font-size: 0.85em; color: #6a737d; }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Regular lists - Enhanced for deep nesting */
+        ul, ol {
+            padding-left: 2em;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        /* First level lists */
+        body > ul, body > ol,
+        body > div > ul, body > div > ol {
+            margin-bottom: 16px;
+        }
+
+        /* Nested lists - progressive spacing reduction */
+        li > ul, li > ol {
+            margin-top: 6px;
+            margin-bottom: 6px;
+            padding-left: 2em;
+        }
+
+        /* Deep nested lists get tighter */
+        li li > ul, li li > ol {
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+
+        li li li > ul, li li li > ol {
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+
+        /* List items - progressive spacing */
+        li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        /* Nested list items have progressively tighter spacing */
+        li li {
+            margin-bottom: 6px;
+        }
+
+        li li li {
+            margin-bottom: 4px;
+        }
+
+        li li li li {
+            margin-bottom: 3px;
+        }
+
+        li li li li li {
+            margin-bottom: 2px;
+        }
+
+        /* Ordered lists - better number styling */
+        ol {
+            counter-reset: item;
+        }
+
+        ol > li {
+            position: relative;
+        }
+
+        /* Bullet style progression for unordered lists */
+        ul {
+            list-style-type: disc;
+        }
+
+        ul ul {
+            list-style-type: circle;
+        }
+
+        ul ul ul {
+            list-style-type: square;
+        }
+
+        ul ul ul ul {
+            list-style-type: disc;
+        }
+
+        ul ul ul ul ul {
+            list-style-type: circle;
+        }
+
+        ul ul ul ul ul ul {
+            list-style-type: square;
+        }
+
+        /* Ordered nested lists - progressive style changes */
+        ol {
+            list-style-type: decimal;
+        }
+
+        ol ol {
+            list-style-type: lower-alpha;
+        }
+
+        ol ol ol {
+            list-style-type: lower-roman;
+        }
+
+        ol ol ol ol {
+            list-style-type: decimal;
+        }
+
+        ol ol ol ol ol {
+            list-style-type: lower-alpha;
+        }
+
+        ol ol ol ol ol ol {
+            list-style-type: lower-roman;
+        }
+
+        /* Visual depth indicators - subtle left border for deep nesting */
+        li li li {
+            padding-left: 4px;
+            border-left: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        li li li li {
+            border-left: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        li li li li li {
+            border-left: 1px solid rgba(0, 0, 0, 0.10);
+        }
+
+        li li li li li li {
+            border-left: 1px solid rgba(0, 0, 0, 0.12);
+        }
+
+        /* Slight background shading for very deep nesting (level 4+) */
+        li li li li {
+            background-color: rgba(240, 240, 240, 0.3);
+            border-radius: 2px;
+        }
+
+        li li li li li {
+            background-color: rgba(240, 240, 240, 0.5);
+        }
+
+        li li li li li li {
+            background-color: rgba(240, 240, 240, 0.7);
+        }
+
+        code {
+            background: #f6f8fa;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        pre {
+            background: #f6f8fa;
+            padding: 16px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin-bottom: 16px;
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+        }
+
+        blockquote {
+            margin: 0 0 16px 0;
+            padding: 0 1em;
+            color: #6a737d;
+            border-left: 4px solid #dfe2e5;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 16px;
+        }
+
+        table th,
+        table td {
+            padding: 6px 13px;
+            border: 1px solid #dfe2e5;
+        }
+
+        table th {
+            font-weight: 600;
+            background: #f6f8fa;
+        }
+
+        table tr:nth-child(2n) {
+            background: #f6f8fa;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #dfe2e5;
+            margin: 24px 0;
+        }
+
+        /* Task lists (checklists) - Matching office view styling */
+        ul.task-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 12px;
+        }
+
+        .task-list-item {
+            padding: 6px 10px;
+            margin-bottom: 4px;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+            position: relative;
+        }
+
+        .task-list-item:hover {
+            background-color: rgba(0, 0, 0, 0.03);
+        }
+
+        /* Container for checkbox and text */
+        .task-list-item .task-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .task-list-item input[type="checkbox"] {
+            margin-top: 3px;
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            border-radius: 3px;
+            border: 2px solid #999;
+            transition: all 0.2s ease;
+            appearance: none;
+            -webkit-appearance: none;
+            background-color: white;
+            position: relative;
+        }
+
+        .task-list-item input[type="checkbox"]:checked {
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+        }
+
+        .task-list-item input[type="checkbox"]:checked::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .task-list-item input[type="checkbox"]:hover {
+            border-color: #666;
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .task-list-item input[type="checkbox"]:checked:hover {
+            border-color: #45a049;
+            background-color: #45a049;
+        }
+
+        /* Completed task text styling */
+        .task-list-item:has(input[type="checkbox"]:checked) .task-text {
+            color: #888;
+            text-decoration: line-through;
+        }
+
+        /* Wrapper for task text */
+        .task-list-item .task-text {
+            flex: 1;
+            line-height: 1.5;
+        }
+
+        /* NESTED TASK LISTS - Clear visual hierarchy matching office view */
+        .task-list-item > .task-list {
+            margin: 8px 0 0 0;
+            padding-left: 32px;
+            position: relative;
+        }
+
+        /* Vertical connecting line for nested items */
+        .task-list-item > .task-list::before {
+            content: '';
+            position: absolute;
+            left: 14px;
+            top: 0;
+            bottom: 4px;
+            width: 2px;
+            background: linear-gradient(to bottom, #d0d0d0 0%, #d0d0d0 90%, transparent 100%);
+            border-radius: 1px;
+        }
+
+        /* Horizontal connector from vertical line to each item */
+        .task-list-item > .task-list > .task-list-item::before {
+            content: '';
+            position: absolute;
+            left: -18px;
+            top: 18px;
+            width: 14px;
+            height: 2px;
+            background: #d0d0d0;
+            border-radius: 1px;
+        }
+
+        /* Progressive background shading with blue tint for depth perception */
+        .task-list .task-list-item {
+            background-color: rgba(100, 100, 255, 0.02);
+        }
+
+        .task-list .task-list .task-list-item {
+            background-color: rgba(100, 100, 255, 0.04);
+        }
+
+        .task-list .task-list .task-list .task-list-item {
+            background-color: rgba(100, 100, 255, 0.06);
+        }
+
+        .task-list .task-list .task-list .task-list .task-list-item {
+            background-color: rgba(100, 100, 255, 0.08);
+        }
+
+        /* Progressive hover states */
+        .task-list .task-list-item:hover {
+            background-color: rgba(100, 100, 255, 0.08);
+        }
+
+        .task-list .task-list .task-list-item:hover {
+            background-color: rgba(100, 100, 255, 0.10);
+        }
+
+        .task-list .task-list .task-list .task-list-item:hover {
+            background-color: rgba(100, 100, 255, 0.12);
+        }
+
+        /* Nested task lists inside regular list items */
+        li > .task-list {
+            padding-left: 32px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        li > .task-list::before {
+            content: '';
+            position: absolute;
+            left: 14px;
+            top: 0;
+            bottom: 4px;
+            width: 2px;
+            background: linear-gradient(to bottom, #d0d0d0 0%, #d0d0d0 90%, transparent 100%);
+            border-radius: 1px;
+        }
+
+        /* Mixed lists with task lists - proper spacing */
+        ul:not(.task-list) > li > .task-list,
+        ol > li > .task-list {
+            margin-top: 8px;
+            padding-left: 24px;
+        }
+
+        .download-btn{background:#fff;color:#06202b;padding:8px 12px;border-radius:10px;font-weight:700;border:none;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,0.3)}
+        
+    </style>
+</head>
+<body>
+<p>⭐ COTOPIA – Distributor Application Form
+<button class="download-btn" id="downloadBtn" title="Download this file"> Download HTML</button></p>
+<p>Exclusive Access • Invitation Only</p>
+<p>Thank you for your interest in becoming an official Cotopia Distributor.</p>
+<p>Please complete this application accurately. All applications are reviewed individually.</p>
+<p>Upon approval, you will receive your Intro Kit (EULA + NDA + Overview) for signature.</p>
+<p>🔵 Section 1 — Contact Information</p>
+<p>Full Legal Name:</p>
+<p>Preferred Name:</p>
+<p>Email Address:</p>
+<p>Phone Number:</p>
+<p>Company Name (if applicable):</p>
+<p>Business Address:</p>
+<p>City / State / ZIP:</p>
+<p>Country:</p>
+<p>🔵 Section 2 — Business Profile</p>
+<ol>
+<li>How did you hear about Cotopia?</li>
+</ol>
+<p>☐ Social Media</p>
+<p>☐ Referral</p>
+<p>☐ Advertisement</p>
+<p>☐ Other: __________________</p>
+<ol start="2">
+<li>Have you ever worked as a distributor, affiliate, or sales representative?</li>
+</ol>
+<p>☐ Yes</p>
+<p>☐ No</p>
+<p>If yes, please describe briefly: _________________________________________</p>
+<ol start="3">
+<li>What interests you most about the Cotopia distributor program?</li>
+</ol>
+<p>☐ Residual income</p>
+<p>☐ Exclusive product access</p>
+<p>☐ Marketing &amp; branding support</p>
+<p>☐ Building a team</p>
+<p>☐ Other: ___________________________________</p>
+<ol start="4">
+<li>What is your estimated monthly time commitment?</li>
+</ol>
+<p>☐ 5–10 hrs/week</p>
+<p>☐ 10–20 hrs/week</p>
+<p>☐ 20+ hrs/week</p>
+<p>🔵 Section 3 — Operations &amp; Readiness</p>
+<ol start="5">
+<li>Do you already manage any online sales channels?</li>
+</ol>
+<p>☐ Facebook</p>
+<p>☐ Instagram</p>
+<p>☐ TikTok</p>
+<p>☐ Website</p>
+<p>☐ None</p>
+<p>☐ Other: _____________________</p>
+<ol start="6">
+<li>Do you have experience with:</li>
+</ol>
+<p>(Select all that apply)</p>
+<p>☐ Customer service</p>
+<p>☐ Basic marketing</p>
+<p>☐ Community building</p>
+<p>☐ Content creation</p>
+<p>☐ Team leadership</p>
+<ol start="7">
+<li>Do you plan to build a team under you (sub-distributors)?</li>
+</ol>
+<p>☐ Yes</p>
+<p>☐ No</p>
+<p>☐ Maybe later</p>
+<p>🔵 Section 4 — Compliance &amp; Eligibility</p>
+<ol start="8">
+<li>Are you willing to sign our NDA and EULA before receiving access to Cotopia systems?</li>
+</ol>
+<p>☐ Yes</p>
+<p>☐ No</p>
+<ol start="9">
+<li>Are you legally eligible to operate as an independent distributor in your location?</li>
+</ol>
+<p>☐ Yes</p>
+<p>☐ No</p>
+<ol start="10">
+<li>Do you understand that Cotopia is an exclusive, invitation-only distributor network?</li>
+</ol>
+<p>☐ Yes</p>
+<p>☐ No</p>
+<p>🔵 Section 5 — Payment &amp; Activation Preparation</p>
+<p>(This is not a payment form — this confirms readiness)</p>
+<ol start="11">
+<li>Are you prepared to submit the activation payment after onboarding acceptance?</li>
+</ol>
+<p>☐ Yes</p>
+<p>☐ No</p>
+<ol start="12">
+<li>Do you understand you will receive the following in sequence?</li>
+</ol>
+<p>✔ Intro Kit → NDA/EULA</p>
+<p>✔ Onboarding Kit → Master Partner Agreement + Exhibits + Tax Docs</p>
+<p>✔ Brand Assets Kit → Products, flyers, templates, posting guides</p>
+<p>✔ Ongoing training + backend support</p>
+<p>☐ Yes</p>
+<p>☐ No</p>
+<p>🔵 Section 6 — Final Confirmation</p>
+<ol start="13">
+<li>Why do you believe you are a strong fit for Cotopia’s distributor network?</li>
+</ol>
+<p>(Short paragraph)</p>
+<p>Digital Signature: _________________________</p>
+<p>Date: _______________</p>
+
+</body>
+
+<script>
+    // Download the current HTML document as a file with the given filename
+    (function(){
+      const btn = document.getElementById('downloadBtn');
+      const filename = 'Cotopia_Software_Distributor_Partner_Program_Business_Plan.html';
+      btn.addEventListener('click', function(){
+        // Serialize the current document HTML
+        const docType = '<!doctype html>\n';
+        const html = document.documentElement.outerHTML;
+        const blob = new Blob([docType + html], {type: 'text/html'});
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(()=>URL.revokeObjectURL(url), 10000);
+      });
+    })();
+  </script>
+</html>
